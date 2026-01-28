@@ -84,14 +84,14 @@ html_content = """
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 1.15rem;
             color: #A8B9CA;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         
         .benefits-row {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
         
@@ -99,20 +99,20 @@ html_content = """
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(201, 169, 98, 0.4);
             border-radius: 12px;
-            padding: 15px 18px;
-            min-width: 130px;
+            padding: 12px 14px;
+            min-width: 120px;
             flex: 1;
-            max-width: 155px;
+            max-width: 140px;
         }
         
         .benefit-icon {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
         }
         
         .benefit-value {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 900;
             color: #C9A962;
             line-height: 1.2;
@@ -120,29 +120,64 @@ html_content = """
         
         .benefit-label {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #A8B9CA;
             line-height: 1.3;
+        }
+        
+        .highlight-row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .highlight-box {
+            background: rgba(201, 169, 98, 0.15);
+            border: 2px solid #C9A962;
+            border-radius: 12px;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .highlight-icon {
+            font-size: 1.5rem;
+        }
+        
+        .highlight-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        
+        .highlight-sub {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8rem;
+            color: #C9A962;
         }
         
         .soft-credit-box {
             background: linear-gradient(135deg, #C9A962 0%, #D4B978 100%);
             border-radius: 12px;
-            padding: 18px 35px;
-            margin-bottom: 30px;
+            padding: 15px 30px;
+            margin-bottom: 25px;
             display: inline-block;
         }
         
         .soft-credit-text {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #0A2540;
         }
         
         .soft-credit-sub {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #0A2540;
             opacity: 0.85;
         }
@@ -159,7 +194,7 @@ html_content = """
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .cta-button:hover {
@@ -169,21 +204,21 @@ html_content = """
         
         .cta-sub {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #A8B9CA;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .footer-contact {
-            margin-top: 25px;
-            padding-top: 20px;
+            margin-top: 20px;
+            padding-top: 15px;
             border-top: 1px solid rgba(201, 169, 98, 0.2);
         }
         
         .footer-email {
             font-family: 'Source Sans Pro', sans-serif;
             font-size: 1rem;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .footer-email a {
@@ -197,23 +232,23 @@ html_content = """
         
         .footer-address {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #A8B9CA;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .footer-licenses {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #7B8C9D;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .footer-disclaimer {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #5A6A7A;
-            margin-top: 10px;
+            margin-top: 8px;
         }
         
         @media (max-width: 600px) {
@@ -221,18 +256,21 @@ html_content = """
                 font-size: 2rem;
             }
             .benefit-box {
-                min-width: 45%;
-                padding: 12px 10px;
+                min-width: 30%;
+                padding: 10px 8px;
             }
             .benefit-value {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             .cta-button {
                 padding: 15px 35px;
                 font-size: 1.1rem;
             }
             .soft-credit-box {
-                padding: 15px 25px;
+                padding: 12px 20px;
+            }
+            .highlight-box {
+                padding: 10px 18px;
             }
         }
     </style>
@@ -274,15 +312,32 @@ html_content = """
             </div>
         </div>
         
+        <div class="highlight-row">
+            <div class="highlight-box">
+                <div class="highlight-icon">⏱️</div>
+                <div>
+                    <div class="highlight-text">5-Minute Application</div>
+                    <div class="highlight-sub">Quick & easy online process</div>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <div class="highlight-icon">✍️</div>
+                <div>
+                    <div class="highlight-text">E-Notary Available</div>
+                    <div class="highlight-sub">Sign from anywhere</div>
+                </div>
+            </div>
+        </div>
+        
         <div class="soft-credit-box">
             <div class="soft-credit-text">✓ Starts With a Soft Credit Check</div>
             <div class="soft-credit-sub">Zero impact to your credit score</div>
         </div>
         
-        <br><br>
+        <br>
         
-        <a href="https://www.fundhelocfast.com" target="_blank" class="cta-button">See What You Qualify For →</a>
-        <div class="cta-sub">Takes just 5 minutes</div>
+        <a href="http://www.fundhelocfast.com" target="_blank" class="cta-button">See What You Qualify For →</a>
+        <div class="cta-sub">Get started in just 5 minutes</div>
         
         <div class="footer-contact">
             <div class="footer-email"><a href="mailto:csalas@westcapitallending.com">csalas@westcapitallending.com</a></div>
@@ -302,4 +357,4 @@ html_content = """
 """
 
 # Render the HTML component
-components.html(html_content, height=750, scrolling=False)
+components.html(html_content, height=800, scrolling=False)
