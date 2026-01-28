@@ -8,19 +8,17 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for single-screen flyer design
-st.markdown("""
+# Custom CSS
+custom_css = """
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
     
-    /* Hide Streamlit defaults */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     .stDeployButton {display: none;}
     [data-testid="stToolbar"] {display: none;}
     
-    /* Full viewport design */
     .stApp {
         background: linear-gradient(145deg, #0A2540 0%, #122D47 50%, #0A2540 100%);
     }
@@ -30,12 +28,10 @@ st.markdown("""
         max-width: 1000px;
     }
     
-    /* Flyer Container */
     .flyer-wrapper {
         text-align: center;
     }
     
-    /* Logo */
     .logo {
         font-family: 'Playfair Display', serif;
         font-size: 1.6rem;
@@ -53,7 +49,6 @@ st.markdown("""
         margin-bottom: 1.2rem;
     }
     
-    /* Main Headline */
     .headline {
         font-family: 'Playfair Display', serif;
         font-size: 2.6rem;
@@ -74,7 +69,6 @@ st.markdown("""
         margin-bottom: 1.5rem;
     }
     
-    /* Benefits Grid */
     .benefits-row {
         display: flex;
         justify-content: center;
@@ -113,7 +107,6 @@ st.markdown("""
         line-height: 1.3;
     }
     
-    /* Soft Credit Callout */
     .soft-credit-box {
         background: linear-gradient(135deg, #C9A962 0%, #D4B978 100%);
         border-radius: 12px;
@@ -136,7 +129,6 @@ st.markdown("""
         opacity: 0.85;
     }
     
-    /* CTA Button */
     .cta-button {
         display: inline-block;
         background: #FFFFFF;
@@ -164,7 +156,6 @@ st.markdown("""
         color: #A8B9CA;
     }
     
-    /* Footer Contact */
     .footer-contact {
         margin-top: 1.2rem;
         padding-top: 1rem;
@@ -208,7 +199,6 @@ st.markdown("""
         margin-top: 0.5rem;
     }
     
-    /* Mobile Responsive */
     @media (max-width: 600px) {
         .headline {
             font-size: 1.9rem;
@@ -226,21 +216,18 @@ st.markdown("""
         }
     }
 </style>
-""", unsafe_allow_html=True)
+"""
 
-# Flyer Content
-st.markdown("""
+# Flyer HTML content
+flyer_html = """
 <div class="flyer-wrapper">
     
-    <!-- Logo -->
     <div class="logo">West Capital Lending</div>
     <div class="logo-sub">Home Equity Solutions</div>
     
-    <!-- Headline -->
     <div class="headline">Tap Into Your <span class="headline-gold">Home Equity</span></div>
     <div class="subheadline">Fast funding. No hassle. Lower rates than credit cards.</div>
     
-    <!-- Benefits Grid -->
     <div class="benefits-row">
         <div class="benefit-box">
             <div class="benefit-icon">💰</div>
@@ -269,7 +256,6 @@ st.markdown("""
         </div>
     </div>
     
-    <!-- Soft Credit Callout -->
     <div class="soft-credit-box">
         <div class="soft-credit-text">✓ Starts With a Soft Credit Check</div>
         <div class="soft-credit-sub">Zero impact to your credit score</div>
@@ -277,11 +263,9 @@ st.markdown("""
     
     <br>
     
-    <!-- CTA Button -->
     <a href="https://www.fundhelocfast.com" target="_blank" class="cta-button">See What You Qualify For →</a>
     <div class="cta-sub">Takes just 5 minutes</div>
     
-    <!-- Footer with Contact Info -->
     <div class="footer-contact">
         <div class="footer-email"><a href="mailto:csalas@westcapitallending.com">csalas@westcapitallending.com</a></div>
         <div class="footer-address">17911 Von Karman Ave Suite 400, Irvine, CA 92614</div>
@@ -295,4 +279,8 @@ st.markdown("""
     </div>
     
 </div>
-""", unsafe_allow_html=True)
+"""
+
+# Render the page
+st.markdown(custom_css, unsafe_allow_html=True)
+st.markdown(flyer_html, unsafe_allow_html=True)
